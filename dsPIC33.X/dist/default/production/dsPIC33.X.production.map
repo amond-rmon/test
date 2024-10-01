@@ -210,13 +210,13 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x1a1c          0x272a  (10026)
 .const                      0x1c1c               0x1a2           0x273  (627)
-.text                       0x1dbe              0x10a4          0x18f6  (6390)
-.dinit                      0x2e62               0x22c           0x342  (834)
-.text                       0x308e               0x658           0x984  (2436)
-.init.delay32               0x36e6                0x1c            0x2a  (42)
-.text                       0x3702                 0x8             0xc  (12)
+.text                       0x1dbe              0x106a          0x189f  (6303)
+.dinit                      0x2e28               0x22c           0x342  (834)
+.text                       0x3054               0x658           0x984  (2436)
+.init.delay32               0x36ac                0x1c            0x2a  (42)
+.text                       0x36c8                 0x8             0xc  (12)
 
-                 Total "program" memory used (bytes):         0x4f8f  (20367) 7%
+                 Total "program" memory used (bytes):         0x4f38  (20280) 7%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x6000]
@@ -361,168 +361,168 @@ External Symbols in Program Memory (by address):
                   0x001d96                  _I2C2_Host
                   0x001daa                  _Timer1
                   0x001dbe                  _MCP79410_Init
-                  0x002242                  _MCP79410_Start
-                  0x0022a8                  _MCP79410_Reset_Hour
-                  0x002408                  _MCP79410_Print
-                  0x0026d0                  _MCP79410_process
-                  0x00297e                  _I2C2_Initialize
-                  0x00299c                  _I2C2_Deinitialize
-                  0x0029b4                  _I2C2_Write
-                  0x002a02                  _I2C2_Read
-                  0x002a52                  _I2C2_WriteRead
-                  0x002aae                  _I2C2_TransferSetup
-                  0x002b56                  _I2C2_ErrorGet
-                  0x002b66                  _I2C2_IsBusy
-                  0x002b96                  _I2C2_CallbackRegister
-                  0x002bae                  _UART1_Initialize
-                  0x002bce                  _UART1_Deinitialize
-                  0x002be4                  _UART1_Read
-                  0x002c02                  _UART1_Write
-                  0x002c18                  _UART1_IsRxReady
-                  0x002c2c                  _UART1_IsTxReady
-                  0x002c4c                  _UART1_IsTxDone
-                  0x002c6e                  _UART1_TransmitEnable
-                  0x002c76                  _UART1_TransmitDisable
-                  0x002c7e                  _UART1_AutoBaudSet
-                  0x002ca4                  _UART1_AutoBaudQuery
-                  0x002cbc                  _UART1_AutoBaudEventEnableGet
-                  0x002cd4                  _UART1_ErrorGet
-                  0x002d2e                  _UART1_BRGCountSet
-                  0x002d44                  _UART1_BRGCountGet
-                  0x002d60                  _UART1_BaudRateSet
-                  0x002df2                  _UART1_BaudRateGet
-                  0x003140                  _RESET_CauseGet
-                  0x00319a                  _RESET_CauseClearAll
-                  0x0031ba                  _DMT_Initialize
-                  0x0031cc                  _DMT_Enable
-                  0x0031d6                  _DMT_PreClear
-                  0x0031e4                  _DMT_Clear
-                  0x0031fa                  _DMT_IsWindowOpen
-                  0x003214                  _DMT_IsPreCleared
-                  0x00321c                  _DMT_TimeoutCounterGet
-                  0x00323a                  _DMT_WindowTimeoutCounterGet
-                  0x003258                  _DMT_StatusGet
-                  0x00326a                  _DMT_CounterGet
-                  0x003288                  _DMT_EventCallbackRegister
-                  0x0032a0                  _Tasks_Realtime_100us
-                  0x0032a6                  _Tasks_Realtime_1ms
-                  0x0032ac                  _Tasks_100us
-                  0x0032b2                  _Tasks_1ms
-                  0x0032b8                  _Tasks_10ms
-                  0x0032be                  _Tasks_100ms
-                  0x00331e                  _Tasks_1s
-                  0x003324                  _Tasks_Background
-                  0x00334c                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_PeriodGet
-                  0x003356                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_CounterGet
-                  0x003360                  _TMR1_Initialize
-                  0x003372                  _TMR1_Deinitialize
-                  0x003382                  _TMR1_Start
-                  0x00338e                  _TMR1_Stop
-                  0x003398                  _TMR1_PeriodSet
-                  0x0033a4                  _TMR1_InterruptPrioritySet
-                  0x0033c2                  _TMR1_TimeoutCallbackRegister
-                  0x0033da                  _TMR1_PeriodCountSet
-                  0x0033e6                  _OS_Scheduler_Init
-                  0x0033f0                  _TMR1_TimeoutCallback
-                  0x003410                  _OS_Scheduler_RunOnce
-                  0x00346a                  _OS_Scheduler_RunForever
-                  0x003474                  _CLOCK_Initialize
-                  0x0034e2                  _CLOCK_AuxPllLockStatusGet
-                  0x0034fa                  _PINS_Initialize
-                  0x003568                  _INTERRUPT_Initialize
-                  0x003596                  _INTERRUPT_Deinitialize
-                  0x0035c4                  _main
-                  0x003616                  _I2C2_Callback
-                  0x00361e                  _DELAY_milliseconds
-                  0x003640                  _DELAY_microseconds
-                  0x003676                  _DMT_CalibratedCounterGet
-                  0x00368a                  _DMT_Calibrate
-                  0x0036b4                  _SYSTEM_Initialize
-                  0x0036e6                  ___delay32
-                  0x003702                  _OS_Init
+                  0x0021fa                  _MCP79410_Start
+                  0x002260                  _MCP79410_Reset_Hour
+                  0x0023ce                  _MCP79410_Print
+                  0x002696                  _MCP79410_process
+                  0x002944                  _I2C2_Initialize
+                  0x002962                  _I2C2_Deinitialize
+                  0x00297a                  _I2C2_Write
+                  0x0029c8                  _I2C2_Read
+                  0x002a18                  _I2C2_WriteRead
+                  0x002a74                  _I2C2_TransferSetup
+                  0x002b1c                  _I2C2_ErrorGet
+                  0x002b2c                  _I2C2_IsBusy
+                  0x002b5c                  _I2C2_CallbackRegister
+                  0x002b74                  _UART1_Initialize
+                  0x002b94                  _UART1_Deinitialize
+                  0x002baa                  _UART1_Read
+                  0x002bc8                  _UART1_Write
+                  0x002bde                  _UART1_IsRxReady
+                  0x002bf2                  _UART1_IsTxReady
+                  0x002c12                  _UART1_IsTxDone
+                  0x002c34                  _UART1_TransmitEnable
+                  0x002c3c                  _UART1_TransmitDisable
+                  0x002c44                  _UART1_AutoBaudSet
+                  0x002c6a                  _UART1_AutoBaudQuery
+                  0x002c82                  _UART1_AutoBaudEventEnableGet
+                  0x002c9a                  _UART1_ErrorGet
+                  0x002cf4                  _UART1_BRGCountSet
+                  0x002d0a                  _UART1_BRGCountGet
+                  0x002d26                  _UART1_BaudRateSet
+                  0x002db8                  _UART1_BaudRateGet
+                  0x003106                  _RESET_CauseGet
+                  0x003160                  _RESET_CauseClearAll
+                  0x003180                  _DMT_Initialize
+                  0x003192                  _DMT_Enable
+                  0x00319c                  _DMT_PreClear
+                  0x0031aa                  _DMT_Clear
+                  0x0031c0                  _DMT_IsWindowOpen
+                  0x0031da                  _DMT_IsPreCleared
+                  0x0031e2                  _DMT_TimeoutCounterGet
+                  0x003200                  _DMT_WindowTimeoutCounterGet
+                  0x00321e                  _DMT_StatusGet
+                  0x003230                  _DMT_CounterGet
+                  0x00324e                  _DMT_EventCallbackRegister
+                  0x003266                  _Tasks_Realtime_100us
+                  0x00326c                  _Tasks_Realtime_1ms
+                  0x003272                  _Tasks_100us
+                  0x003278                  _Tasks_1ms
+                  0x00327e                  _Tasks_10ms
+                  0x003284                  _Tasks_100ms
+                  0x0032e4                  _Tasks_1s
+                  0x0032ea                  _Tasks_Background
+                  0x003312                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_PeriodGet
+                  0x00331c                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_CounterGet
+                  0x003326                  _TMR1_Initialize
+                  0x003338                  _TMR1_Deinitialize
+                  0x003348                  _TMR1_Start
+                  0x003354                  _TMR1_Stop
+                  0x00335e                  _TMR1_PeriodSet
+                  0x00336a                  _TMR1_InterruptPrioritySet
+                  0x003388                  _TMR1_TimeoutCallbackRegister
+                  0x0033a0                  _TMR1_PeriodCountSet
+                  0x0033ac                  _OS_Scheduler_Init
+                  0x0033b6                  _TMR1_TimeoutCallback
+                  0x0033d6                  _OS_Scheduler_RunOnce
+                  0x003430                  _OS_Scheduler_RunForever
+                  0x00343a                  _CLOCK_Initialize
+                  0x0034a8                  _CLOCK_AuxPllLockStatusGet
+                  0x0034c0                  _PINS_Initialize
+                  0x00352e                  _INTERRUPT_Initialize
+                  0x00355c                  _INTERRUPT_Deinitialize
+                  0x00358a                  _main
+                  0x0035dc                  _I2C2_Callback
+                  0x0035e4                  _DELAY_milliseconds
+                  0x003606                  _DELAY_microseconds
+                  0x00363c                  _DMT_CalibratedCounterGet
+                  0x003650                  _DMT_Calibrate
+                  0x00367a                  _SYSTEM_Initialize
+                  0x0036ac                  ___delay32
+                  0x0036c8                  _OS_Init
                   0x02bf00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0034e2                  _CLOCK_AuxPllLockStatusGet
-                  0x003474                  _CLOCK_Initialize
-                  0x003640                  _DELAY_microseconds
-                  0x00361e                  _DELAY_milliseconds
-                  0x00368a                  _DMT_Calibrate
-                  0x003676                  _DMT_CalibratedCounterGet
-                  0x0031e4                  _DMT_Clear
-                  0x00326a                  _DMT_CounterGet
-                  0x0031cc                  _DMT_Enable
-                  0x003288                  _DMT_EventCallbackRegister
-                  0x0031ba                  _DMT_Initialize
-                  0x003214                  _DMT_IsPreCleared
-                  0x0031fa                  _DMT_IsWindowOpen
-                  0x0031d6                  _DMT_PreClear
-                  0x003258                  _DMT_StatusGet
-                  0x00321c                  _DMT_TimeoutCounterGet
-                  0x00323a                  _DMT_WindowTimeoutCounterGet
-                  0x003616                  _I2C2_Callback
-                  0x002b96                  _I2C2_CallbackRegister
-                  0x00299c                  _I2C2_Deinitialize
-                  0x002b56                  _I2C2_ErrorGet
+                  0x0034a8                  _CLOCK_AuxPllLockStatusGet
+                  0x00343a                  _CLOCK_Initialize
+                  0x003606                  _DELAY_microseconds
+                  0x0035e4                  _DELAY_milliseconds
+                  0x003650                  _DMT_Calibrate
+                  0x00363c                  _DMT_CalibratedCounterGet
+                  0x0031aa                  _DMT_Clear
+                  0x003230                  _DMT_CounterGet
+                  0x003192                  _DMT_Enable
+                  0x00324e                  _DMT_EventCallbackRegister
+                  0x003180                  _DMT_Initialize
+                  0x0031da                  _DMT_IsPreCleared
+                  0x0031c0                  _DMT_IsWindowOpen
+                  0x00319c                  _DMT_PreClear
+                  0x00321e                  _DMT_StatusGet
+                  0x0031e2                  _DMT_TimeoutCounterGet
+                  0x003200                  _DMT_WindowTimeoutCounterGet
+                  0x0035dc                  _I2C2_Callback
+                  0x002b5c                  _I2C2_CallbackRegister
+                  0x002962                  _I2C2_Deinitialize
+                  0x002b1c                  _I2C2_ErrorGet
                   0x001d96                  _I2C2_Host
-                  0x00297e                  _I2C2_Initialize
-                  0x002b66                  _I2C2_IsBusy
-                  0x002a02                  _I2C2_Read
-                  0x002aae                  _I2C2_TransferSetup
-                  0x0029b4                  _I2C2_Write
-                  0x002a52                  _I2C2_WriteRead
-                  0x003596                  _INTERRUPT_Deinitialize
-                  0x003568                  _INTERRUPT_Initialize
+                  0x002944                  _I2C2_Initialize
+                  0x002b2c                  _I2C2_IsBusy
+                  0x0029c8                  _I2C2_Read
+                  0x002a74                  _I2C2_TransferSetup
+                  0x00297a                  _I2C2_Write
+                  0x002a18                  _I2C2_WriteRead
+                  0x00355c                  _INTERRUPT_Deinitialize
+                  0x00352e                  _INTERRUPT_Initialize
                   0x001dbe                  _MCP79410_Init
-                  0x002408                  _MCP79410_Print
-                  0x0022a8                  _MCP79410_Reset_Hour
-                  0x002242                  _MCP79410_Start
-                  0x0026d0                  _MCP79410_process
-                  0x003702                  _OS_Init
-                  0x0033e6                  _OS_Scheduler_Init
-                  0x00346a                  _OS_Scheduler_RunForever
-                  0x003410                  _OS_Scheduler_RunOnce
-                  0x0034fa                  _PINS_Initialize
-                  0x00319a                  _RESET_CauseClearAll
-                  0x003140                  _RESET_CauseGet
-                  0x0036b4                  _SYSTEM_Initialize
-                  0x003372                  _TMR1_Deinitialize
-                  0x003360                  _TMR1_Initialize
-                  0x0033a4                  _TMR1_InterruptPrioritySet
-                  0x0033da                  _TMR1_PeriodCountSet
-                  0x003398                  _TMR1_PeriodSet
-                  0x003382                  _TMR1_Start
-                  0x00338e                  _TMR1_Stop
-                  0x0033f0                  _TMR1_TimeoutCallback
-                  0x0033c2                  _TMR1_TimeoutCallbackRegister
-                  0x0032be                  _Tasks_100ms
-                  0x0032ac                  _Tasks_100us
-                  0x0032b8                  _Tasks_10ms
-                  0x0032b2                  _Tasks_1ms
-                  0x00331e                  _Tasks_1s
-                  0x003324                  _Tasks_Background
-                  0x0032a0                  _Tasks_Realtime_100us
-                  0x0032a6                  _Tasks_Realtime_1ms
+                  0x0023ce                  _MCP79410_Print
+                  0x002260                  _MCP79410_Reset_Hour
+                  0x0021fa                  _MCP79410_Start
+                  0x002696                  _MCP79410_process
+                  0x0036c8                  _OS_Init
+                  0x0033ac                  _OS_Scheduler_Init
+                  0x003430                  _OS_Scheduler_RunForever
+                  0x0033d6                  _OS_Scheduler_RunOnce
+                  0x0034c0                  _PINS_Initialize
+                  0x003160                  _RESET_CauseClearAll
+                  0x003106                  _RESET_CauseGet
+                  0x00367a                  _SYSTEM_Initialize
+                  0x003338                  _TMR1_Deinitialize
+                  0x003326                  _TMR1_Initialize
+                  0x00336a                  _TMR1_InterruptPrioritySet
+                  0x0033a0                  _TMR1_PeriodCountSet
+                  0x00335e                  _TMR1_PeriodSet
+                  0x003348                  _TMR1_Start
+                  0x003354                  _TMR1_Stop
+                  0x0033b6                  _TMR1_TimeoutCallback
+                  0x003388                  _TMR1_TimeoutCallbackRegister
+                  0x003284                  _Tasks_100ms
+                  0x003272                  _Tasks_100us
+                  0x00327e                  _Tasks_10ms
+                  0x003278                  _Tasks_1ms
+                  0x0032e4                  _Tasks_1s
+                  0x0032ea                  _Tasks_Background
+                  0x003266                  _Tasks_Realtime_100us
+                  0x00326c                  _Tasks_Realtime_1ms
                   0x001daa                  _Timer1
-                  0x002cbc                  _UART1_AutoBaudEventEnableGet
-                  0x002ca4                  _UART1_AutoBaudQuery
-                  0x002c7e                  _UART1_AutoBaudSet
-                  0x002d44                  _UART1_BRGCountGet
-                  0x002d2e                  _UART1_BRGCountSet
-                  0x002df2                  _UART1_BaudRateGet
-                  0x002d60                  _UART1_BaudRateSet
-                  0x002bce                  _UART1_Deinitialize
+                  0x002c82                  _UART1_AutoBaudEventEnableGet
+                  0x002c6a                  _UART1_AutoBaudQuery
+                  0x002c44                  _UART1_AutoBaudSet
+                  0x002d0a                  _UART1_BRGCountGet
+                  0x002cf4                  _UART1_BRGCountSet
+                  0x002db8                  _UART1_BaudRateGet
+                  0x002d26                  _UART1_BaudRateSet
+                  0x002b94                  _UART1_Deinitialize
                   0x001d3a                  _UART1_Drv
-                  0x002cd4                  _UART1_ErrorGet
-                  0x002bae                  _UART1_Initialize
-                  0x002c18                  _UART1_IsRxReady
-                  0x002c4c                  _UART1_IsTxDone
-                  0x002c2c                  _UART1_IsTxReady
-                  0x002be4                  _UART1_Read
-                  0x002c76                  _UART1_TransmitDisable
-                  0x002c6e                  _UART1_TransmitEnable
-                  0x002c02                  _UART1_Write
+                  0x002c9a                  _UART1_ErrorGet
+                  0x002b74                  _UART1_Initialize
+                  0x002bde                  _UART1_IsRxReady
+                  0x002c12                  _UART1_IsTxDone
+                  0x002bf2                  _UART1_IsTxReady
+                  0x002baa                  _UART1_Read
+                  0x002c3c                  _UART1_TransmitDisable
+                  0x002c34                  _UART1_TransmitEnable
+                  0x002bc8                  _UART1_Write
                   0x00041e                  __AddressError
                   0x00051a                  __DMTInterrupt
                   0x000560                  __DefaultInterrupt
@@ -538,7 +538,7 @@ External Symbols in Program Memory (by name):
                   0x000692                  ___addsf3
                   0x000692                  ___addsf3x
                   0x000fa6                  ___cvt_u
-                  0x0036e6                  ___delay32
+                  0x0036ac                  ___delay32
                   0x001b60                  ___divdi3
                   0x00085c                  ___divsf3
                   0x00085c                  ___divsf3x
@@ -596,14 +596,14 @@ External Symbols in Program Memory (by name):
                   0x000b7a                  __unpackdnrmf
                   0x000cc4                  __unpackf
                   0x0017f2                  _atoi
-                  0x0035c4                  _main
+                  0x00358a                  _main
                   0x00184a                  _memcpy
                   0x001858                  _memset
                   0x001920                  _strlen
                   0x001964                  _tolower
                   0x001972                  _toupper
-                  0x003356                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_CounterGet
-                  0x00334c                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_PeriodGet
+                  0x00331c                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_CounterGet
+                  0x003312                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_PeriodGet
 
 Memory Configuration
 
@@ -991,7 +991,7 @@ __FBTSEQ
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x8311
+.debug_info       0x000000       0x834a
  *(.debug_info)
  .debug_info      0x000000       0x1396 build/default/production/mcc_generated_files/i2c_host/src/i2c2.o
  .debug_info      0x001396         0xce build/default/production/mcc_generated_files/system/src/dmt_asm.o
@@ -1010,26 +1010,26 @@ __FBTSEQ
  .debug_info      0x0066b8        0x162 build/default/production/sources/os/os_scheduler_1ms.o
  .debug_info      0x00681a        0x15d build/default/production/sources/os/os_sys_time.o
  .debug_info      0x006977        0x15a build/default/production/sources/os/os_timer.o
- .debug_info      0x006ad1        0x32f build/default/production/main.o
- .debug_info      0x006e00        0x66f build/default/production/main_tasks.o
- .debug_info      0x00746f        0x4a0 build/default/production/MCP79410_Init.o
- .debug_info      0x00790f         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunssfsi.CH_o)
- .debug_info      0x00799f         0x91 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsisf.CH_o)
- .debug_info      0x007a30         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
- .debug_info      0x007abd         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.CH_o)
- .debug_info      0x007b4a         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
- .debug_info      0x007be7         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
- .debug_info      0x007c84         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
- .debug_info      0x007d21         0xa0 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
- .debug_info      0x007dc1         0xa2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
- .debug_info      0x007e63         0x9c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
- .debug_info      0x007eff         0x9f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
- .debug_info      0x007f9e         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
- .debug_info      0x00803b         0x9e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
- .debug_info      0x0080d9         0x91 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
- .debug_info      0x00816a         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
- .debug_info      0x0081f5         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.CH_o)
- .debug_info      0x008285         0x8c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+ .debug_info      0x006ad1        0x342 build/default/production/main.o
+ .debug_info      0x006e13        0x682 build/default/production/main_tasks.o
+ .debug_info      0x007495        0x4b3 build/default/production/MCP79410_Init.o
+ .debug_info      0x007948         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunssfsi.CH_o)
+ .debug_info      0x0079d8         0x91 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsisf.CH_o)
+ .debug_info      0x007a69         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
+ .debug_info      0x007af6         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.CH_o)
+ .debug_info      0x007b83         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
+ .debug_info      0x007c20         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
+ .debug_info      0x007cbd         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
+ .debug_info      0x007d5a         0xa0 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
+ .debug_info      0x007dfa         0xa2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
+ .debug_info      0x007e9c         0x9c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
+ .debug_info      0x007f38         0x9f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
+ .debug_info      0x007fd7         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
+ .debug_info      0x008074         0x9e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
+ .debug_info      0x008112         0x91 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
+ .debug_info      0x0081a3         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
+ .debug_info      0x00822e         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.CH_o)
+ .debug_info      0x0082be         0x8c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000       0x1352
@@ -1073,7 +1073,7 @@ __FBTSEQ
  .debug_abbrev    0x00132a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.CH_o)
  .debug_abbrev    0x00133e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
 
-.debug_line       0x000000       0x20ec
+.debug_line       0x000000       0x20ea
  *(.debug_line)
  .debug_line      0x000000        0x2b2 build/default/production/mcc_generated_files/i2c_host/src/i2c2.o
  .debug_line      0x0002b2         0x6f build/default/production/mcc_generated_files/system/src/dmt_asm.o
@@ -1095,25 +1095,25 @@ __FBTSEQ
  .debug_line      0x001438         0x1a build/default/production/sources/os/os_timer.o
  .debug_line      0x001452        0x135 build/default/production/main.o
  .debug_line      0x001587        0x144 build/default/production/main_tasks.o
- .debug_line      0x0016cb        0x1bf build/default/production/MCP79410_Init.o
- .debug_line      0x00188a         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunssfsi.CH_o)
- .debug_line      0x0018dd         0x3b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsisf.CH_o)
- .debug_line      0x001918         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
- .debug_line      0x001962         0x45 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.CH_o)
- .debug_line      0x0019a7        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
- .debug_line      0x001add        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
- .debug_line      0x001c01         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
- .debug_line      0x001ccd         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
- .debug_line      0x001d3f         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
- .debug_line      0x001db9         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
- .debug_line      0x001e17         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
- .debug_line      0x001e68         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
- .debug_line      0x001f00         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
- .debug_line      0x001f79         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
- .debug_line      0x001f93         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
- .debug_line      0x001fff         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
- .debug_line      0x002059         0x59 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.CH_o)
- .debug_line      0x0020b2         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+ .debug_line      0x0016cb        0x1bd build/default/production/MCP79410_Init.o
+ .debug_line      0x001888         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunssfsi.CH_o)
+ .debug_line      0x0018db         0x3b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatunsisf.CH_o)
+ .debug_line      0x001916         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
+ .debug_line      0x001960         0x45 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.CH_o)
+ .debug_line      0x0019a5        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
+ .debug_line      0x001adb        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
+ .debug_line      0x001bff         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
+ .debug_line      0x001ccb         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
+ .debug_line      0x001d3d         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
+ .debug_line      0x001db7         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
+ .debug_line      0x001e15         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
+ .debug_line      0x001e66         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
+ .debug_line      0x001efe         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
+ .debug_line      0x001f77         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
+ .debug_line      0x001f91         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
+ .debug_line      0x001ffd         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
+ .debug_line      0x002057         0x59 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.CH_o)
+ .debug_line      0x0020b0         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
 
 .debug_frame      0x000000        0xe6e
  *(.debug_frame)
@@ -5128,114 +5128,114 @@ __xc_reference_data
  .const             0x9daa         0x14 build/default/production/mcc_generated_files/timer/src/tmr1.o
                     0x9daa                  _Timer1
 
-.text             0x001dbe       0x10a4
- .text            0x001dbe        0x928 build/default/production/MCP79410_Init.o
+.text             0x001dbe       0x106a
+ .text            0x001dbe        0x8ee build/default/production/MCP79410_Init.o
                   0x001dbe                  _MCP79410_Init
-                  0x002242                  _MCP79410_Start
-                  0x0022a8                  _MCP79410_Reset_Hour
-                  0x002408                  _MCP79410_Print
-                  0x0026d0                  _MCP79410_process
- .text            0x0026e6        0x4c8 build/default/production/mcc_generated_files/i2c_host/src/i2c2.o
-                  0x00297e                  _I2C2_Initialize
-                  0x00299c                  _I2C2_Deinitialize
-                  0x0029b4                  _I2C2_Write
-                  0x002a02                  _I2C2_Read
-                  0x002a52                  _I2C2_WriteRead
-                  0x002aae                  _I2C2_TransferSetup
-                  0x002b56                  _I2C2_ErrorGet
-                  0x002b66                  _I2C2_IsBusy
-                  0x002b96                  _I2C2_CallbackRegister
- .text            0x002bae        0x2b4 build/default/production/mcc_generated_files/uart/src/uart1.o
-                  0x002bae                  _UART1_Initialize
-                  0x002bce                  _UART1_Deinitialize
-                  0x002be4                  _UART1_Read
-                  0x002c02                  _UART1_Write
-                  0x002c18                  _UART1_IsRxReady
-                  0x002c2c                  _UART1_IsTxReady
-                  0x002c4c                  _UART1_IsTxDone
-                  0x002c6e                  _UART1_TransmitEnable
-                  0x002c76                  _UART1_TransmitDisable
-                  0x002c7e                  _UART1_AutoBaudSet
-                  0x002ca4                  _UART1_AutoBaudQuery
-                  0x002cbc                  _UART1_AutoBaudEventEnableGet
-                  0x002cd4                  _UART1_ErrorGet
-                  0x002d2e                  _UART1_BRGCountSet
-                  0x002d44                  _UART1_BRGCountGet
-                  0x002d60                  _UART1_BaudRateSet
-                  0x002df2                  _UART1_BaudRateGet
+                  0x0021fa                  _MCP79410_Start
+                  0x002260                  _MCP79410_Reset_Hour
+                  0x0023ce                  _MCP79410_Print
+                  0x002696                  _MCP79410_process
+ .text            0x0026ac        0x4c8 build/default/production/mcc_generated_files/i2c_host/src/i2c2.o
+                  0x002944                  _I2C2_Initialize
+                  0x002962                  _I2C2_Deinitialize
+                  0x00297a                  _I2C2_Write
+                  0x0029c8                  _I2C2_Read
+                  0x002a18                  _I2C2_WriteRead
+                  0x002a74                  _I2C2_TransferSetup
+                  0x002b1c                  _I2C2_ErrorGet
+                  0x002b2c                  _I2C2_IsBusy
+                  0x002b5c                  _I2C2_CallbackRegister
+ .text            0x002b74        0x2b4 build/default/production/mcc_generated_files/uart/src/uart1.o
+                  0x002b74                  _UART1_Initialize
+                  0x002b94                  _UART1_Deinitialize
+                  0x002baa                  _UART1_Read
+                  0x002bc8                  _UART1_Write
+                  0x002bde                  _UART1_IsRxReady
+                  0x002bf2                  _UART1_IsTxReady
+                  0x002c12                  _UART1_IsTxDone
+                  0x002c34                  _UART1_TransmitEnable
+                  0x002c3c                  _UART1_TransmitDisable
+                  0x002c44                  _UART1_AutoBaudSet
+                  0x002c6a                  _UART1_AutoBaudQuery
+                  0x002c82                  _UART1_AutoBaudEventEnableGet
+                  0x002c9a                  _UART1_ErrorGet
+                  0x002cf4                  _UART1_BRGCountSet
+                  0x002d0a                  _UART1_BRGCountGet
+                  0x002d26                  _UART1_BaudRateSet
+                  0x002db8                  _UART1_BaudRateGet
 
-.dinit            0x002e62        0x22c
- .dinit           0x002e62        0x22c data_init
+.dinit            0x002e28        0x22c
+ .dinit           0x002e28        0x22c data_init
 
-.text             0x00308e        0x658
- .text            0x00308e        0x114 build/default/production/mcc_generated_files/system/src/reset.o
-                  0x003140                  _RESET_CauseGet
-                  0x003148                  _RESET_CauseHandler
-                  0x00319a                  _RESET_CauseClearAll
- .text            0x0031a2         0xfe build/default/production/mcc_generated_files/system/src/dmt.o
-                  0x0031ba                  _DMT_Initialize
-                  0x0031cc                  _DMT_Enable
-                  0x0031d6                  _DMT_PreClear
-                  0x0031e4                  _DMT_Clear
-                  0x0031fa                  _DMT_IsWindowOpen
-                  0x003214                  _DMT_IsPreCleared
-                  0x00321c                  _DMT_TimeoutCounterGet
-                  0x00323a                  _DMT_WindowTimeoutCounterGet
-                  0x003258                  _DMT_StatusGet
-                  0x00326a                  _DMT_CounterGet
-                  0x003288                  _DMT_EventCallbackRegister
-                  0x00329a                  _DMT_EventCallback
- .text            0x0032a0         0xac build/default/production/main_tasks.o
-                  0x0032a0                  _Tasks_Realtime_100us
-                  0x0032a6                  _Tasks_Realtime_1ms
-                  0x0032ac                  _Tasks_100us
-                  0x0032b2                  _Tasks_1ms
-                  0x0032b8                  _Tasks_10ms
-                  0x0032be                  _Tasks_100ms
-                  0x00331e                  _Tasks_1s
-                  0x003324                  _Tasks_Background
- .text            0x00334c         0x9a build/default/production/mcc_generated_files/timer/src/tmr1.o
-                  0x00334c                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_PeriodGet
-                  0x003356                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_CounterGet
-                  0x003360                  _TMR1_Initialize
-                  0x003372                  _TMR1_Deinitialize
-                  0x003382                  _TMR1_Start
-                  0x00338e                  _TMR1_Stop
-                  0x003398                  _TMR1_PeriodSet
-                  0x0033a4                  _TMR1_InterruptPrioritySet
-                  0x0033c2                  _TMR1_TimeoutCallbackRegister
-                  0x0033da                  _TMR1_PeriodCountSet
- .text            0x0033e6         0x8e build/default/production/sources/os/os_scheduler_100us.o
-                  0x0033e6                  _OS_Scheduler_Init
-                  0x0033f0                  _TMR1_TimeoutCallback
-                  0x003410                  _OS_Scheduler_RunOnce
-                  0x00346a                  _OS_Scheduler_RunForever
- .text            0x003474         0x86 build/default/production/mcc_generated_files/system/src/clock.o
-                  0x003474                  _CLOCK_Initialize
-                  0x0034e2                  _CLOCK_AuxPllLockStatusGet
- .text            0x0034fa         0x6e build/default/production/mcc_generated_files/system/src/pins.o
-                  0x0034fa                  _PINS_Initialize
- .text            0x003568         0x5c build/default/production/mcc_generated_files/system/src/interrupt.o
-                  0x003568                  _INTERRUPT_Initialize
-                  0x003596                  _INTERRUPT_Deinitialize
- .text            0x0035c4         0x5a build/default/production/main.o
-                  0x0035c4                  _main
-                  0x003616                  _I2C2_Callback
- .text            0x00361e         0x56 build/default/production/mcc_generated_files/timer/src/delay.o
-                  0x00361e                  _DELAY_milliseconds
-                  0x003640                  _DELAY_microseconds
- .text            0x003674         0x34 build/default/production/mcc_generated_files/system/src/dmt_asm.o
-                  0x003676                  _DMT_CalibratedCounterGet
-                  0x00368a                  _DMT_Calibrate
- .text            0x0036a8         0x22 build/default/production/mcc_generated_files/system/src/system.o
-                  0x0036b4                  _SYSTEM_Initialize
- .text            0x0036ca         0x1c build/default/production/mcc_generated_files/system/src/traps.o
-                  0x0036ca                  _TRAPS_halt_on_error
+.text             0x003054        0x658
+ .text            0x003054        0x114 build/default/production/mcc_generated_files/system/src/reset.o
+                  0x003106                  _RESET_CauseGet
+                  0x00310e                  _RESET_CauseHandler
+                  0x003160                  _RESET_CauseClearAll
+ .text            0x003168         0xfe build/default/production/mcc_generated_files/system/src/dmt.o
+                  0x003180                  _DMT_Initialize
+                  0x003192                  _DMT_Enable
+                  0x00319c                  _DMT_PreClear
+                  0x0031aa                  _DMT_Clear
+                  0x0031c0                  _DMT_IsWindowOpen
+                  0x0031da                  _DMT_IsPreCleared
+                  0x0031e2                  _DMT_TimeoutCounterGet
+                  0x003200                  _DMT_WindowTimeoutCounterGet
+                  0x00321e                  _DMT_StatusGet
+                  0x003230                  _DMT_CounterGet
+                  0x00324e                  _DMT_EventCallbackRegister
+                  0x003260                  _DMT_EventCallback
+ .text            0x003266         0xac build/default/production/main_tasks.o
+                  0x003266                  _Tasks_Realtime_100us
+                  0x00326c                  _Tasks_Realtime_1ms
+                  0x003272                  _Tasks_100us
+                  0x003278                  _Tasks_1ms
+                  0x00327e                  _Tasks_10ms
+                  0x003284                  _Tasks_100ms
+                  0x0032e4                  _Tasks_1s
+                  0x0032ea                  _Tasks_Background
+ .text            0x003312         0x9a build/default/production/mcc_generated_files/timer/src/tmr1.o
+                  0x003312                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_PeriodGet
+                  0x00331c                  build/default/production/mcc_generated_files/timer/src/tmr1.o:_TMR1_CounterGet
+                  0x003326                  _TMR1_Initialize
+                  0x003338                  _TMR1_Deinitialize
+                  0x003348                  _TMR1_Start
+                  0x003354                  _TMR1_Stop
+                  0x00335e                  _TMR1_PeriodSet
+                  0x00336a                  _TMR1_InterruptPrioritySet
+                  0x003388                  _TMR1_TimeoutCallbackRegister
+                  0x0033a0                  _TMR1_PeriodCountSet
+ .text            0x0033ac         0x8e build/default/production/sources/os/os_scheduler_100us.o
+                  0x0033ac                  _OS_Scheduler_Init
+                  0x0033b6                  _TMR1_TimeoutCallback
+                  0x0033d6                  _OS_Scheduler_RunOnce
+                  0x003430                  _OS_Scheduler_RunForever
+ .text            0x00343a         0x86 build/default/production/mcc_generated_files/system/src/clock.o
+                  0x00343a                  _CLOCK_Initialize
+                  0x0034a8                  _CLOCK_AuxPllLockStatusGet
+ .text            0x0034c0         0x6e build/default/production/mcc_generated_files/system/src/pins.o
+                  0x0034c0                  _PINS_Initialize
+ .text            0x00352e         0x5c build/default/production/mcc_generated_files/system/src/interrupt.o
+                  0x00352e                  _INTERRUPT_Initialize
+                  0x00355c                  _INTERRUPT_Deinitialize
+ .text            0x00358a         0x5a build/default/production/main.o
+                  0x00358a                  _main
+                  0x0035dc                  _I2C2_Callback
+ .text            0x0035e4         0x56 build/default/production/mcc_generated_files/timer/src/delay.o
+                  0x0035e4                  _DELAY_milliseconds
+                  0x003606                  _DELAY_microseconds
+ .text            0x00363a         0x34 build/default/production/mcc_generated_files/system/src/dmt_asm.o
+                  0x00363c                  _DMT_CalibratedCounterGet
+                  0x003650                  _DMT_Calibrate
+ .text            0x00366e         0x22 build/default/production/mcc_generated_files/system/src/system.o
+                  0x00367a                  _SYSTEM_Initialize
+ .text            0x003690         0x1c build/default/production/mcc_generated_files/system/src/traps.o
+                  0x003690                  _TRAPS_halt_on_error
 
-.init.delay32     0x0036e6         0x1c
- .init.delay32    0x0036e6         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
-                  0x0036e6                  ___delay32
+.init.delay32     0x0036ac         0x1c
+ .init.delay32    0x0036ac         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
+                  0x0036ac                  ___delay32
 
-.text             0x003702          0x8
- .text            0x003702          0x8 build/default/production/sources/os/os.o
-                  0x003702                  _OS_Init
+.text             0x0036c8          0x8
+ .text            0x0036c8          0x8 build/default/production/sources/os/os.o
+                  0x0036c8                  _OS_Init

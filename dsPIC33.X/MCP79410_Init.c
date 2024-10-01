@@ -33,7 +33,7 @@ cmd MCP79410_initCmd[] = {
     /* 0x09 */  {EEUNLOCK,   0x00,                              "EEUNLOCK"},
     /* 0x0A */  {ALM0SEC,    0x00,                              "ALM0SEC"},
     /* 0x0B */  {ALM0MIN,    0x00,                              "ALM0MIN"},
-    /* 0x0C */  {ALM0HOUR,   0x00,                              "ALM0HOUR"},
+    /* 0x0C */  {ALM0HOUR,   0x17,                              "ALM0HOUR"},
     /* 0x0D */  {ALM0WKDAY,  (ALMMSK|ALM0IF|WKDAY),             "ALM0WKDAY"},
     /* 0x0E */  {ALM0DATE,   0x00,                              "ALM0DATE"},
     /* 0x0F */  {ALM0MTH,    0x00,                              "ALM0MTH"},
@@ -62,6 +62,7 @@ void MCP79410_Init(void) {
     uint8_t index= 0;
     
     rtcc_status.flag = 0;
+    rtcc_status.First = 1;
     
     index = RTCSEC;
     while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index].addr, 2));
@@ -104,11 +105,11 @@ void MCP79410_Init(void) {
     while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
     MCP79410_process();
     
-    index = OSCTRIM;
-    while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index].addr, 2));
-    MCP79410_process();
-    while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
-    MCP79410_process();
+//    index = OSCTRIM;
+//    while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index].addr, 2));
+//    MCP79410_process();
+//    while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
+//    MCP79410_process();
     /* end of setting fast test */
     
     index = RTCYEAR;
@@ -217,22 +218,29 @@ void MCP79410_Reset_Hour(void) {
     }
     
     dummy = MCP79410_initCmd[ALM0HOUR].command;
-    if(dummy == 0) {
-        dummy = 0x23;
+    
+    if(rtcc_status.First == 1) {
+        dummy = 0;
+        rtcc_status.First = 0;
     }
     else {
-        data_temp_ten = (dummy & 0xF0) >> 4;
-        data_temp_one = dummy & 0x0F;
-
-        if(data_temp_one  == 0) {
-            data_temp_ten -= 1;
-            data_temp_one = 9;
+        if(dummy == 0) {
+            dummy = 0x23;
         }
         else {
-            data_temp_one -= 1;
-        }
+            data_temp_ten = (dummy & 0xF0) >> 4;
+            data_temp_one = dummy & 0x0F;
 
-        dummy = (data_temp_ten << 4) | data_temp_one;
+            if(data_temp_one  == 0) {
+                data_temp_ten -= 1;
+                data_temp_one = 9;
+            }
+            else {
+                data_temp_one -= 1;
+            }
+
+            dummy = (data_temp_ten << 4) | data_temp_one;
+        }
     }
     
     MCP79410_initCmd[ALM0HOUR].command = dummy;

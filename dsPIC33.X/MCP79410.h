@@ -34,7 +34,8 @@ typedef union{
         uint8_t Initinal        :1;
         uint8_t Interrupt       :1;
         uint8_t Issue           :1;
-        uint8_t reserved        :5;
+        uint8_t First           :1;
+        uint8_t reserved        :4;
     };
     uint8_t flag;
 }MCP79410_STATUS_u;

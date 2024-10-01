@@ -1,0 +1,13 @@
+擷取資料的顯示,,,,,,,,,,,
+------------------------------------------------------------------------------------------------,,,,,,,,,,,
+Bus以十六進制數據顯示。,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+1,Bus1(I2C),3.88826ms,Start,6F,Write,A-ACK,07,D-ACK,,,
+2,Bus1(I2C),4.08676ms,Start,6F,Read,A-ACK,14,D-NACK,Stop,Master NACK,
+3,Bus1(I2C),15.71725ms,Start,6F,Write,A-ACK,0C,D-ACK,,,
+4,Bus1(I2C),15.9157ms,Start,6F,Read,A-ACK,00,D-NACK,Stop,Master NACK,
+5,Bus1(I2C),32.11652ms,Start,6F,Write,A-ACK,0C,D-ACK,23,D-ACK,Stop
+6,Bus1(I2C),42.47772ms,Start,6F,Write,A-ACK,0D,D-ACK,,,
+7,Bus1(I2C),42.67632ms,Start,6F,Read,A-ACK,2A,D-NACK,Stop,Master NACK,
+8,Bus1(I2C),59.05193ms,Start,6F,Write,A-ACK,0D,D-ACK,20,D-ACK,Stop
