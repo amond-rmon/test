@@ -22,8 +22,8 @@ MCP79410_STATUS_u rtcc_status;
 
 cmd MCP79410_initCmd[] = {
     /* 0x00 */  {RTCSEC,     0x30,                              "RTCSEC"},
-    /* 0x01 */  {RTCMIN,     0x06,                              "RTCMIN"},
-    /* 0x02 */  {RTCHOUR,    0x16,                              "RTCHOUR"},
+    /* 0x01 */  {RTCMIN,     0x05,                              "RTCMIN"},
+    /* 0x02 */  {RTCHOUR,    0x01,                              "RTCHOUR"},
     /* 0x03 */  {RTCWKDAY,   (PWRFAIL|VBATEN|WKDAY),            "RTCWKDAY"},
     /* 0x04 */  {RTCDATE,    0x18,                              "RTCDATE"},
     /* 0x05 */  {RTCMTH,     0x09,                              "RTCMTH"},
@@ -33,7 +33,7 @@ cmd MCP79410_initCmd[] = {
     /* 0x09 */  {EEUNLOCK,   0x00,                              "EEUNLOCK"},
     /* 0x0A */  {ALM0SEC,    0x00,                              "ALM0SEC"},
     /* 0x0B */  {ALM0MIN,    0x00,                              "ALM0MIN"},
-    /* 0x0C */  {ALM0HOUR,   0x17,                              "ALM0HOUR"},
+    /* 0x0C */  {ALM0HOUR,   0x02,                              "ALM0HOUR"},
     /* 0x0D */  {ALM0WKDAY,  (ALMMSK|ALM0IF|WKDAY),             "ALM0WKDAY"},
     /* 0x0E */  {ALM0DATE,   0x00,                              "ALM0DATE"},
     /* 0x0F */  {ALM0MTH,    0x00,                              "ALM0MTH"},
@@ -64,6 +64,7 @@ void MCP79410_Init(void) {
     rtcc_status.flag = 0;
     rtcc_status.First = 1;
     
+#if 0
     index = RTCSEC;
     while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index].addr, 2));
     MCP79410_process();
@@ -105,11 +106,11 @@ void MCP79410_Init(void) {
     while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
     MCP79410_process();
     
-//    index = OSCTRIM;
-//    while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index].addr, 2));
-//    MCP79410_process();
-//    while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
-//    MCP79410_process();
+    index = OSCTRIM;
+    while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index].addr, 2));
+    MCP79410_process();
+    while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
+    MCP79410_process();
     /* end of setting fast test */
     
     index = RTCYEAR;
@@ -156,11 +157,26 @@ void MCP79410_Init(void) {
     MCP79410_initCmd[index].command = 0xB0;
     while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index], 2));
     MCP79410_process();
+#else
+    for(index = 0; index < 16; index++) {
+        while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index].addr, 2));
+        MCP79410_process();
+        while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
+        MCP79410_process();
+    }
+    
+    index = RTCSEC;
+    while(!I2C2_WriteRead(MCP79410_address, &MCP79410_initCmd[index].addr, 1, &MCP79410_initCmd[index].command, 1));
+    MCP79410_process();
+    MCP79410_initCmd[index].command = 0xB0;
+    while(!I2C2_Write(MCP79410_address, &MCP79410_initCmd[index], 2));
+    MCP79410_process();
+#endif
     
     rtcc_status.Initinal = 1;
     
     printf("\n\r");
-    for(index = 0; index < 14; index++) {
+    for(index = 0; index < 16; index++) {
         printf("%s 0x%2X = 0x%2X \n\r", 
                 MCP79410_initCmd[index].name, 
                 MCP79410_initCmd[index].addr, 
@@ -273,6 +289,7 @@ void MCP79410_Reset_Hour(void) {
 void MCP79410_Print(void) {
     uint8_t index = 0;
     
+#if 0
     index = ALM0WKDAY;
     while(!I2C2_WriteRead(MCP79410_address, &MCP79410_rxBuf[index].addr, 1, &MCP79410_rxBuf[index].command, 1));
     MCP79410_process();    
@@ -332,9 +349,16 @@ void MCP79410_Print(void) {
     index = ALM0SEC;
     while(!I2C2_WriteRead(MCP79410_address, &MCP79410_rxBuf[index].addr, 1, &MCP79410_rxBuf[index].command, 1));
     MCP79410_process(); 
+#else
+    for(index = 0; index < 16; index++) {
+        while(!I2C2_WriteRead(MCP79410_address, &MCP79410_rxBuf[index].addr, 1, &MCP79410_rxBuf[index].command, 1));
+        MCP79410_process();
+    }
+    
+#endif
     
     printf("\n\r");
-    for(index = 0; index < 14; index++) {
+    for(index = 0; index < 16; index++) {
         printf("%s 0x%2X = 0x%2X \n\r", 
                 MCP79410_rxBuf[index].name, 
                 MCP79410_rxBuf[index].addr, 

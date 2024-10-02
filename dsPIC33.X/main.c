@@ -23,6 +23,7 @@
 #include "sources/os/os.h"
 #include "MCP79410.h"
 #include "mcc_generated_files/timer/tmr1.h"
+#include "mcc_generated_files/timer/delay.h"
 
 
 /*
@@ -34,20 +35,22 @@ int main(void)
     uint8_t index = 0;
     
     SYSTEM_Initialize();
+    
+    DELAY_milliseconds(100);
 
-    for(index = 0; index < 14; index++) {
-        printf("\n\r Index : %d \n\r", index);
+//    for(index = 0; index < 14; index++) {
+//        printf("\n\r Index : %d \n\r", index);
         MCP79410_Print();
-    }
+//    }
     
     printf("\n\r MCP79410 Initinal \n\r");
     MCP79410_Init();
 //    MCP79410_Start(); 
     
-    for(index = 0; index < 9; index++) {
-        printf("\n\r Index : %d \n\r", index);
-        MCP79410_Print();
-    }
+//    for(index = 0; index < 9; index++) {
+//        printf("\n\r Index : %d \n\r", index);
+//        MCP79410_Print();
+//    }
     
     
     OS_Init();

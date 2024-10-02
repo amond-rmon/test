@@ -21,7 +21,7 @@
 #define ST          1 << 7
 #define WKDAY       2 << 0
 #define PWRFAIL     0 << 4
-#define VBATEN      1 << 3
+#define VBATEN      0 << 3
 #define CRSTRIM     0 << 2
 #define EXTOSC      0 << 3
 #define ALM0EN      1 << 4
